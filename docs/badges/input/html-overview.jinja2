@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Badges</title>
+    <meta name="robots" content="noindex,nofollow">
+    <style>body { font-family:sans-serif; }</style>
+</head>
+<h1>Badges</h1>
+<table>
+    {% for svg in svgs %}
+    <tr>
+        <td>{{ svg.filename }}</td>
+        <td><img src="{{ svg.filename }}" /></td>
+    </tr>
+    {% endfor %}
+</table>
+<body>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="{{ first.width + second.width }}" height="20">
+  <linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient>
+  <clipPath id="a">
+    <rect width="{{ first.width + second.width }}" height="20" rx="3" fill="#fff"/>
+  </clipPath>
+  <g clip-path="url(#a)">
+    <path fill="#555" d="M0 0h49v20H0z"/>
+    <path fill="{{ second.color }}" d="M{{ first.width - 1 }} 0h{{ first.width + second.width }}v20H{{ first.width - 1 }}z"/>
+    <path fill="url(#b)" d="M0 0h{{ first.width + second.width }}v20H0z"/>
+  </g>
+  <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
+    <text x="{{ first.width / 2 }}" y="15" fill="#010101" fill-opacity=".3">{{ first.name }}</text>
+    <text x="{{ first.width / 2 }}" y="14">{{ first.name }}</text>
+    <text x="{{ second.width / 2 + first.width }}" y="15" fill="#010101" fill-opacity=".3">{{ second.name }}</text>
+    <text x="{{ second.width / 2 + first.width }}" y="14">{{ second.name }}</text>
+  </g>
+</svg>
