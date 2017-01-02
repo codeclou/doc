@@ -18,7 +18,7 @@ svgs = [
     #
     {
         'filename': 'docker-run-as-non-root.svg',
-        'first':  { 'name': 'run as', 'width': 45 },
+        'first':  { 'name': 'run as', 'width': 48 },
         'second': { 'name': 'non-root', 'width': 60, 'color': '#40B45B' },
     },
     #
@@ -38,6 +38,9 @@ for svg in svgs:
     print 'writing ' + svg['filename']
 
 
+#
+# DOCKER IMAGE SIZE
+#
 for number in list(range(12, 30)):
     svgcode = render('svg-badge-template.jinja2', {
         'first':  { 'name': 'image', 'width': 50 },
@@ -50,7 +53,9 @@ for number in list(range(12, 30)):
     print 'writing ' + docker_image_size_filename
     svgs.append({ 'filename': docker_image_size_filename })
 
-
+#
+# HTML SUMMARY
+#
 overview = open('/pyapp/data/index.html', 'w+')
 overviewcode = render('html-overview.jinja2', { 'svgs': svgs })
 overview.write(overviewcode)
