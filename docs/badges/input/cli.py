@@ -41,7 +41,7 @@ for svg in svgs:
 #
 # DOCKER IMAGE SIZE
 #
-for number in list(range(12, 30)):
+for number in list(range(12, 60)):
     svgcode = render('svg-badge-template.jinja2', {
         'first':  { 'name': 'image', 'width': 50 },
         'second': { 'name': str(number) + ' MB', 'width': 44, 'color': '#627FFF' },
