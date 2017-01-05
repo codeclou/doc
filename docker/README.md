@@ -8,7 +8,7 @@
 
 <p>&nbsp;</p>
 
-## Using images on macOS
+## Using images on macOS Docker-Host
 
 When using Docker-Images on macOS the UID and GID are automatically mapped to the user running the docker container.
 Usually docker can be run without sudo as non-root user, therefore you do not need an extra unpriviledged user on the Docker-Host.
