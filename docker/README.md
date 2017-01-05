@@ -4,7 +4,14 @@
  * [all codeclou images on Docker Hub](https://hub.docker.com/u/codeclou/)
 
 
+------
+
 <p>&nbsp;</p>
+
+## Using images on macOS
+
+When using Docker-Images on macOS the UID and GID are automatically mapped to the user running the docker container.
+Usually docker can be run without sudo as non-root user, therefore you do not need an extra unpriviledged user on the Docker-Host.
 
 ------
 
@@ -17,7 +24,7 @@ For the example the [docker-pyload](https://github.com/codeclou/docker-pyload) I
 
 ### (1) Create unpriviliged user on Docker-Host and prepare Volume Mounts
 
-All Docker-Images provided by ubuntu run in non-root mode and use an user internally with UID 10777 and GID 10777.
+All Docker-Images provided by codeclou run in non-root mode and use an user internally with UID 10777 and GID 10777.
 Therefore Volumes that should be mounted need appropriate Permissions for the Docker-Container to be able to write to the directories.
 
 Therefore we create a user called  `dockerworker` and a group called `dockerworker` on the Ubuntu Docker-Host
