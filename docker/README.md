@@ -24,7 +24,7 @@ For the example the [docker-pyload](https://github.com/codeclou/docker-pyload) I
 
 ### (1) Create unpriviliged user on Docker-Host and prepare Volume Mounts
 
-All Docker-Images provided by codeclou run in non-root mode and use an user internally with UID 10777 and GID 10777.
+All Docker-Images provided by codeclou and marked with 'non-root' run in non-root mode and use an user internally with UID 10777 and GID 10777.
 Therefore Volumes that should be mounted need appropriate Permissions for the Docker-Container to be able to write to the directories.
 
 Therefore we create a user called  `dockerworker` and a group called `dockerworker` on the Ubuntu Docker-Host
