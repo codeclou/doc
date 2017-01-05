@@ -3,15 +3,17 @@
 
  * [all codeclou images on Docker Hub](https://hub.docker.com/u/codeclou/)
 
-## Using image as Service with systemd on e.g. Ubuntu 16.04 Docker-Host
-
-For the example the [docker-pyload](https://github.com/codeclou/docker-pyload) Image is used. These recommendations come without warranty and should be seen as general recommendations. You should check if they are appropriate for yourself and fit your companies security policies.
 
 <p>&nbsp;</p>
 
 ------
 
 <p>&nbsp;</p>
+
+## Using image as Service with systemd on e.g. Ubuntu 16.04 Docker-Host
+
+For the example the [docker-pyload](https://github.com/codeclou/docker-pyload) Image is used. These recommendations come without warranty and should be seen as general recommendations. You should check if they are appropriate for yourself and fit your companies security policies.
+
 
 ### (1) Create unpriviliged user on Docker-Host and prepare Volume Mounts
 
@@ -41,9 +43,6 @@ chmod -R u+rwx,g+rwx,o-rwx /opt/pyload/config
 
 
 <p>&nbsp;</p>
-
-------
-
 <p>&nbsp;</p>
 
 
@@ -69,9 +68,6 @@ docker stop pyload
 
 
 <p>&nbsp;</p>
-
-------
-
 <p>&nbsp;</p>
 
 ### (3) Create systemd config
