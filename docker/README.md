@@ -1,1 +1,3 @@
-# Global Documentation on Docker-Images provided by codeclou 
+# Docker-Images provided by codeclou 
+
+## General Usage recommendations
