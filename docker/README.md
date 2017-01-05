@@ -1,7 +1,7 @@
 # Documentation on Docker-Images provided by codeclou 
 
 
-[ALL codeclou DOCKER IMAGES](https://hub.docker.com/u/codeclou/)
+ * [all codeclou images on Docker Hub](https://hub.docker.com/u/codeclou/)
 
 ## Using image as Service with systemd on e.g. Ubuntu 16.04 Docker-Host
 
