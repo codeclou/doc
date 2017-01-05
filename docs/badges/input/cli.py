@@ -25,9 +25,14 @@ svgs = [
     # FROM
     #
     {
-        'filename': 'docker-from-alpine-linux.svg',
+        'filename': 'docker-from-alpine-3.5.svg',
         'first':  { 'name': 'from', 'width': 40 },
-        'second': { 'name': 'alpine linux', 'width': 75, 'color': '#627FFF' },
+        'second': { 'name': 'alpine 3.5', 'width': 65, 'color': '#627FFF' },
+    },
+    {
+        'filename': 'docker-from-ubuntu-16.04.svg',
+        'first':  { 'name': 'from', 'width': 40 },
+        'second': { 'name': 'ubuntu 16.04', 'width': 85, 'color': '#627FFF' },
     },
 ]
 for svg in svgs:
@@ -45,6 +50,18 @@ for number in list(range(12, 60)):
     svgcode = render('svg-badge-template.jinja2', {
         'first':  { 'name': 'image', 'width': 50 },
         'second': { 'name': str(number) + ' MB', 'width': 44, 'color': '#627FFF' },
+    })
+    docker_image_size_filename = 'docker-image-size-' + str(number) + '.svg'
+    f = open('/pyapp/data/' + docker_image_size_filename , 'w+')
+    f.write(svgcode)
+    f.close()
+    print 'writing ' + docker_image_size_filename
+    svgs.append({ 'filename': docker_image_size_filename })
+
+for number in list(range(190, 230)):
+    svgcode = render('svg-badge-template.jinja2', {
+        'first':  { 'name': 'image', 'width': 50 },
+        'second': { 'name': str(number) + ' MB', 'width': 55, 'color': '#627FFF' },
     })
     docker_image_size_filename = 'docker-image-size-' + str(number) + '.svg'
     f = open('/pyapp/data/' + docker_image_size_filename , 'w+')
