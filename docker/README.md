@@ -10,6 +10,30 @@ For the example the [docker-pyload](https://github.com/codeclou/docker-pyload) I
 
 ### (1) Create unpriviliged user on Docker-Host and prepare Volume Mounts
 
+All Docker-Images provided by ubuntu run in non-root mode and use an user internally with UID 10777 and GID 10777.
+Therefore Volumes that should be mounted need appropriate Permissions for the Docker-Container to be able to write to the directories.
+
+Therefore we create a user called  `dockerworker` and a group called `dockerworker` on the Ubuntu Docker-Host
+and set permissions for our designated Volume directories.
+
+```
+addgroup --gid 10777 dockerworker
+adduser --uid 10777 --gid 10777 --no-create-home --disabled-password --disabled-login --gecos "" dockerworker
+```
+
+Set the permissions for designated Volumes.
+
+```
+mkdir -p /opt/pyload/downloads
+chown -R dockerworker:dockerworker /opt/pyload/downloads
+chmod -R u+rwx,g+rwx,o-rwx /opt/pyload/downloads
+
+
+mkdir -p /opt/pyload/config
+chown -R dockerworker:dockerworker /opt/pyload/config
+chmod -R u+rwx,g+rwx,o-rwx /opt/pyload/config
+```
+
 
 ### (2) Create Named Docker-Container
 
