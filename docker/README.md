@@ -135,7 +135,7 @@ In your `Jenkinsfile` set permissions at start.
 stage('Build') {
     sh 'chgrp -R dockerworker ${WORKSPACE}'
     sh 'chmod -R g+w ${WORKSPACE}'
-    sh "docker run --tty -v ${WORKSPACE}/:/icons/ codeclou/docker-xml-and-svg-tools:latest bash /icons/jenkins-convert-icons.sh"
+    sh "docker run --rm --tty -v ${WORKSPACE}/:/icons/ codeclou/docker-xml-and-svg-tools:latest bash /icons/jenkins-convert-icons.sh"
 }
 ```
 
