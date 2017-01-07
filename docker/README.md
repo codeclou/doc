@@ -13,6 +13,7 @@
 When using Docker-Images on macOS the UID and GID are automatically mapped to the user running the docker container.
 Usually docker can be run without sudo as non-root user, therefore you do not need an extra unpriviledged user on the Docker-Host.
 
+
 ------
 
 <p>&nbsp;</p>
@@ -103,4 +104,33 @@ Reload Daemon, Start Docker Image and add to System Startup
 systemctl daemon-reload
 systemctl start pyload.service
 systemctl enable pyload.service
+```
+
+
+------
+
+<p>&nbsp;</p>
+
+## Using from Jenkins
+
+Add Jenkins to dockerworker group and restart jenkins.
+
+```
+adduser jenkins dockerworker
+```
+
+In your `Jenkinsfile` set permissions at start.
+
+```
+stage('Build') {
+    sh 'chgrp -R dockerworker ${WORKSPACE}'
+    sh 'chmod -R g+w ${WORKSPACE}'
+    sh "docker run --tty -v ${WORKSPACE}/:/icons/ codeclou/docker-xml-and-svg-tools:latest bash /icons/jenkins-convert-icons.sh"
+}
+```
+
+Inside your runscripts or docker-entrypoints use:
+
+```
+umask u+rxw,g+rwx,o-rwx
 ```
