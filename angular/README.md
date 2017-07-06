@@ -3,6 +3,7 @@
 ## Preconditions
 
  * We use IntelliJ
+ * We use Editorconfig (2 space tabs, linux line endings)
  * We use TypeScript
  * We use Tslint
  * We use Angular CLI and the tslint config from there
@@ -44,6 +45,23 @@ const foo = {
 };
 ```
 
+
+:red_circle: BAD
+
+```html
+<my-comp [foo]="bar" class="foo">content</my-comp>
+```
+
+:white_check_mark: GOOD
+
+```typescript
+<my-comp
+  [foo]="bar"
+  class="foo"
+>
+  content
+</my-comp>
+```
 
 ## IntelliJ
 
