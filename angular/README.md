@@ -65,5 +65,9 @@ const foo = {
 
 ## IntelliJ
 
+Configure IntelliJ this way:
 
+![](https://codeclou.github.io/doc/intellij/intellij-codestyle-quotes.png)
+
+![](https://codeclou.github.io/doc/intellij/intellij-codestyle-spaces.png)
 
