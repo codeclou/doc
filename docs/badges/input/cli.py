@@ -63,7 +63,7 @@ for number in list(range(5, 99)):
     print 'writing ' + docker_image_size_filename
     svgs.append({ 'filename': docker_image_size_filename })
 
-for number in list(range(100, 950)):
+for number in list(range(100, 999)):
     svgcode = render('svg-badge-template.jinja2', {
         'first':  { 'name': 'image', 'width': 50 },
         'second': { 'name': str(number) + ' MB', 'width': 55, 'color': '#627FFF' },
