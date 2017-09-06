@@ -14,6 +14,14 @@ def render(tpl_path, context):
 
 svgs = [
     #
+    # ROOT
+    #
+    {
+        'filename': 'docker-run-as-root.svg',
+        'first':  { 'name': 'run as', 'width': 48 },
+        'second': { 'name': 'root', 'width': 60, 'color': '#AC2416' },
+    },
+    #
     # NON ROOT
     #
     {
