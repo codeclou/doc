@@ -17,6 +17,14 @@ svgs = [
     # ROOT
     #
     {
+        'filename': 'test-coverage-100.svg',
+        'first':  { 'name': 'coverage', 'width': 60 },
+        'second': { 'name': '100%', 'width': 50, 'color': '#2D882D' },
+    },
+    #
+    # ROOT
+    #
+    {
         'filename': 'docker-run-as-root.svg',
         'first':  { 'name': 'run as', 'width': 48 },
         'second': { 'name': 'root', 'width': 60, 'color': '#AC2416' },
@@ -54,7 +62,6 @@ for svg in svgs:
     f.write(svgcode)
     f.close()
     print 'writing ' + svg['filename']
-
 
 #
 # DOCKER IMAGE SIZE

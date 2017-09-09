@@ -4,7 +4,7 @@
     <rect width="108" height="20" rx="3" fill="#fff"/>
   </clipPath>
   <g clip-path="url(#a)">
-    <path fill="#555" d="M0 0h49v20H0z"/>
+    <path fill="#555" d="M0 0h89v20H0z"/>
     <path fill="#40B45B" d="M47 0h108v20H47z"/>
     <path fill="url(#b)" d="M0 0h108v20H0z"/>
   </g>
