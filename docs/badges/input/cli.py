@@ -41,6 +41,11 @@ svgs = [
     # FROM
     #
     {
+        'filename': 'docker-from-alpine-3.8.svg',
+        'first':  { 'name': 'from', 'width': 40 },
+        'second': { 'name': 'alpine 3.8', 'width': 65, 'color': '#627FFF' },
+    },
+    {
         'filename': 'docker-from-alpine-3.5.svg',
         'first':  { 'name': 'from', 'width': 40 },
         'second': { 'name': 'alpine 3.5', 'width': 65, 'color': '#627FFF' },
@@ -59,6 +64,11 @@ svgs = [
         'filename': 'docker-from-ubuntu-16.04.svg',
         'first':  { 'name': 'from', 'width': 40 },
         'second': { 'name': 'ubuntu 16.04', 'width': 85, 'color': '#627FFF' },
+    },
+    {
+        'filename': 'docker-from-ubuntu-18.04.svg',
+        'first':  { 'name': 'from', 'width': 40 },
+        'second': { 'name': 'ubuntu 18.04', 'width': 85, 'color': '#627FFF' },
     },
 ]
 for svg in svgs:
